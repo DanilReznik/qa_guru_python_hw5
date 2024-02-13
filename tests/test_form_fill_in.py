@@ -5,15 +5,15 @@ import os
 
 def test_registration_form(browser_conf):
     browser.open('/')
-    #browser.driver.execute_script("document.querySelector('.body-height').style.transform='scale(.50)'")
+    # browser.driver.execute_script("document.querySelector('.body-height').style.transform='scale(.50)'")
     browser.element('#firstName').type('Danil')
     browser.element('#lastName').type('Reznikov')
     browser.element('#userEmail').type('test1@mail.ru')
     browser.all('.custom-radio').element_by(have.text('Male')).click()
     browser.element('#userNumber').type('7712836614')
     browser.element('#dateOfBirthInput').click()
-    browser.element('.react-datepicker__month-select').type('October')  # click().element('[value="9"]').click()
-    browser.element('.react-datepicker__year-select').type('1996')  # click().element('[value="1996"]').click()
+    browser.element('.react-datepicker__month-select').type('October')
+    browser.element('.react-datepicker__year-select').type('1996')
     browser.element(f'.react-datepicker__day--0{14}').click()
     browser.element('#subjectsInput').type('Computer Science').press_enter()
     browser.element('[for="hobbies-checkbox-1"]').click()
@@ -24,7 +24,7 @@ def test_registration_form(browser_conf):
     browser.element('#city').click().element(by.text('Delhi')).click()
     browser.element('#submit').click()
 
-    #assert
+    # assert
     browser.element('.table-responsive').all('td').even.should(have.texts(
         'Danil Reznikov',
         'test1@mail.ru',
