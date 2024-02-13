@@ -1,5 +1,4 @@
-import pytest
-from selene import browser, be, have, by
+from selene import browser, have, by
 import os
 
 
