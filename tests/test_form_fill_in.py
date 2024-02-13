@@ -5,7 +5,7 @@ import os
 
 def test_registration_form(browser_conf):
     browser.open('/')
-    browser.driver.execute_script("document.querySelector('.body-height').style.transform='scale(.50)'")
+    #browser.driver.execute_script("document.querySelector('.body-height').style.transform='scale(.50)'")
     browser.element('#firstName').type('Danil')
     browser.element('#lastName').type('Reznikov')
     browser.element('#userEmail').type('test1@mail.ru')
@@ -25,8 +25,6 @@ def test_registration_form(browser_conf):
     browser.element('#submit').click()
 
     #assert
-    browser.element('.table-responsive').all('td').even.should()
-    have.texts()
     browser.element('.table-responsive').all('td').even.should(have.texts(
         'Danil Reznikov',
         'test1@mail.ru',
