@@ -3,7 +3,7 @@ import os
 
 
 def test_registration_form(browser_conf):
-    browser.open('/')
+    browser.open('automation-practice-form')
     # browser.driver.execute_script("document.querySelector('.body-height').style.transform='scale(.50)'")
     browser.element('#firstName').type('Danil')
     browser.element('#lastName').type('Reznikov')
