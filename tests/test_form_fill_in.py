@@ -30,7 +30,7 @@ def test_registration_form(browser_conf):
         'test1@mail.ru',
         'Male',
         '7712836614',
-        '14 October, 1996',
+        '14 October,1996',
         'Computer Science',
         'Sports, Reading',
         'image_2024-02-08_19-42-48.png',
